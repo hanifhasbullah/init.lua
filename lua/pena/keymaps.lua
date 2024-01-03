@@ -29,10 +29,10 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Resize with arrows
-keymap("n", "<A-Up>", ":resize +2<CR>", opts)
-keymap("n", "<A-Down>", ":resize -2<CR>", opts)
-keymap("n", "<A-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<A-Right>", ":vertical resize +2<CR>", opts)
+keymap("n", "<C-Up>", ":resize +2<CR>", opts)
+keymap("n", "<C-Down>", ":resize -2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -73,8 +73,8 @@ keymap('n', 'gm', vim.diagnostic.open_float, { desc = 'Open floating diagnostic 
 keymap('n', 'gl', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- Bbye
-keymap('n', '<leader>Q', ':bufdo :Bdelete<CR>', { desc = 'Close all buffers'})
 keymap('n', '<leader>q', ':q!<CR>', { desc = 'Quit'})
 keymap('n', '<leader>w', ':w!<CR>', { desc = 'Save'})
 keymap('n', '<leader>x', ':Bdelete<CR>', { desc = 'Close current buffers'})
+keymap('n', '<leader>X', ':bufdo :Bdelete<CR>', { desc = 'Close all buffers'})
 
