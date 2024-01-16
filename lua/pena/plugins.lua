@@ -22,6 +22,7 @@ end
 lazy.setup({
   "folke/lazy.nvim",
   "nvim-lua/popup.nvim",
+  "ThePrimeagen/git-worktree.nvim",
 
   -- bbye
   "moll/vim-bbye",
