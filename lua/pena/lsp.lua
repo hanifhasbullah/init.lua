@@ -41,6 +41,7 @@ local on_attach = function(_, bufnr)
   vim.api.nvim_buf_create_user_command(bufnr, 'Format', function(_)
     vim.lsp.buf.format()
   end, { desc = 'Format current buffer with LSP' })
+  nmap('<leader>fd', '<cmd>Format<cr>', '[F]ormat document')
 end
 
 -- mason-lspconfig requires that these setup functions are called in this order
@@ -86,6 +87,8 @@ local servers = {
       diagnostics = { globals = { "vim" }}
     },
   },
+  eslint = {},
+  -- java_language_server = {},
 }
 
 -- Setup neovim lua configuration

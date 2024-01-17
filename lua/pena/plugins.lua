@@ -141,5 +141,10 @@ lazy.setup({
 
   -- Git
   { 'lewis6991/gitsigns.nvim' },
+
+  {
+    'nvimtools/none-ls.nvim',
+    event = 'VeryLazy',
+  }
 },{})
 
