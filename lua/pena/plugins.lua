@@ -28,7 +28,7 @@ lazy.setup({
   "moll/vim-bbye",
 
   -- colorscheme
-  { 'rose-pine/neovim', name = 'rose-pine' },
+  { 'rose-pine/neovim',     name = 'rose-pine' },
 
   -- cmp
   {
@@ -64,12 +64,12 @@ lazy.setup({
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-      { 'j-hui/fidget.nvim', opts = {} },
+      { 'j-hui/fidget.nvim',     opts = {} },
 
       -- Additional lua configuration, makes nvim stuff amazing!
       'folke/neodev.nvim',
 
-      {'RRethy/vim-illuminate', commit = 'd6ca7f77eeaf61b3e6ce9f0e5a978d606df44298'}
+      { 'RRethy/vim-illuminate', commit = 'd6ca7f77eeaf61b3e6ce9f0e5a978d606df44298' }
     },
   },
 
@@ -98,7 +98,7 @@ lazy.setup({
   },
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {}, lazy = false, },
+  { 'numToStr/Comment.nvim', opts = {},             lazy = false, },
 
   -- Treesitter
   { -- Highlight, edit, and navigate code
@@ -110,10 +110,11 @@ lazy.setup({
   },
 
   -- autopairs
-  { 'windwp/nvim-autopairs', event = "InsertEnter", opts = {}},
+  { 'windwp/nvim-autopairs', event = "InsertEnter", opts = {} },
 
   -- nvim-tree
-  { 'nvim-tree/nvim-tree.lua',
+  {
+    'nvim-tree/nvim-tree.lua',
     dependencies = {
       'nvim-tree/nvim-web-devicons'
     }
@@ -134,10 +135,10 @@ lazy.setup({
   },
 
   -- buffer tab
-  {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+  -- {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
 
   -- Terminal
-  {'akinsho/toggleterm.nvim', version = "*", config = true},
+  { 'akinsho/toggleterm.nvim', version = "*", config = true },
 
   -- Git
   { 'lewis6991/gitsigns.nvim' },
@@ -145,6 +146,20 @@ lazy.setup({
   {
     'nvimtools/none-ls.nvim',
     event = 'VeryLazy',
-  }
-},{})
+  },
 
+  -- Harpoon
+  {
+    "ThePrimeagen/harpoon",
+    event = "VeryLazy",
+    dependencies = {
+      { "nvim-lua/plenary.nvim" },
+    },
+  },
+
+  -- winbar
+  { "SmiteshP/nvim-navic" },
+
+  -- breadcrumbs
+  { "LunarVim/breadcrumbs.nvim", }
+}, {})
